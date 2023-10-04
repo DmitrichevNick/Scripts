@@ -21,7 +21,7 @@ jobs:
     - name: Docker Build and Push
       uses: docker/build-push-action@v2
       with:
-        context: .
+        context: ./Dockeriles/postgre
         file: ./Dockerfile
         tags: my-image-name:t10
         build-args: |
