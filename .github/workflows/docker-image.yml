@@ -16,4 +16,4 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build ./Dockeriles/postgre --file ./Dockeriles/postgre/Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build ./Dockerfiles/postgre --file ./Dockerfiles/postgre/Dockerfile --tag my-image-name:$(date +%s)
