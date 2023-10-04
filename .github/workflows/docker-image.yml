@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: ls
-      run: ls Dockeriles
+      run: ls Dockeriles/postgre
     - name: Build the Docker image
-      run: docker build Dockeriles/ --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build Dockeriles/postgre --file Dockerfile --tag my-image-name:$(date +%s)
