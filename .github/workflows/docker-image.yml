@@ -13,19 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: ls
-      run: ls Dockeriles/postgre
     - name: Checkout
-      uses: actions/checkout@v2
-    - name: Docker Build and Push
-      uses: docker/build-push-action@v2
-      with:
-        context: ./Dockeriles/postgre
-        file: ./Dockeriles/postgre/Dockerfile
-        tags: my-image-name:t10
-        build-args: |
-            "NPM_TOKEN=${{ secrets.TOKEN }}"
-        push: true
+      uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build Dockeriles/postgre --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build ./Dockeriles/postgre --file ./Dockeriles/postgre/Dockerfile --tag my-image-name:$(date +%s)
