@@ -15,5 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      working-directory: Dockeriles
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build ./Dockeriles/ --file Dockerfile --tag my-image-name:$(date +%s)
