@@ -22,7 +22,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./Dockeriles/postgre
-        file: ./Dockerfile
+        file: ./Dockeriles/postgre/Dockerfile
         tags: my-image-name:t10
         build-args: |
             "NPM_TOKEN=${{ secrets.TOKEN }}"
